@@ -1,24 +1,18 @@
+
 *{
     box-sizing: border-box;
     list-style: none;
 }
 
-header{
-    padding: 50px;
-    text-align: center; 
-    background: url("photos/meal.jpg") ;
-    width: 100%;
-    height: 30%;
-    color:  rgb(255, 89, 0);
-}  
-
-header h1{
-    font-size: 50px;
+body{
+    background: url("photos/moroccan-flower.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 nav{
     
-    background-color: black;
+    background: url("photos/y-so-serious.png");
     overflow: hidden;
 }
 
@@ -40,14 +34,27 @@ nav a:hover{
     color: tomato;
 }
 
-p{  
-    font-size: 45px;
+span.red{
+    font-size: 55px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
-    color: orangered;
+    color: rgba(220, 20, 60, 1);
+    
 }
-main{
-    background: url("photos/moroccan-flower.png");
+
+
+span.orange{
+    font-size: 55px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    color: rgba(255, 87, 51, 1);
+}
+
+span.black{
+    font-size: 55px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 1);
 }
 
 section{
@@ -67,7 +74,7 @@ iframe{
 
 
 footer{
-    background-color: black;
+    background: url("photos/y-so-serious.png");
     overflow: hidden;
 }
 
@@ -97,19 +104,31 @@ footer a:hover{
 }
 
 .getbtn{
-    width: 100px;
-    height: 30px;
+    width: 250px;
+    height: 80px;
     color: white;
-    background: rgb(112, 8, 22);
+    background: rgb(200, 48, 6);
     border: 1px solid #383a3e;
     border-radius: 10px;
     margin: 10px 5px;
+    font-size: 35px;
 }
 
 .getbtn:hover{
     background: black;
-    border-bottom: 1.2px solid black;
+    border-bottom: 1.2px black;
     color: white;
-    font-weight: bold;
-    box-shadow:  0 5px 5px 0 #1f212348, 0 7px 7px 0 #1f212348;
+    font-weight: bolder;
+    border-radius: 5px;
+    box-shadow:  0 7px 7px 0 #1f212348, 0 10px 10px 0 #1f212348;
+}
+
+.photo{
+    position: absolute;
+   
+    left: 65%;
+    top: 30%;
+    width: 200px;
+    height: 200px;
+    
 }
