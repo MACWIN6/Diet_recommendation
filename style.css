@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 *{
     box-sizing: border-box;
     list-style: none;
@@ -22,11 +22,24 @@ nav.sticky{
     top: 0; 
 }
 
+nav b{
+    display: block;
+    color: rgba(220, 20, 60, 1);
+    font-family: 'lato';
+    font-weight: black;
+    font-size: 30px;
+    padding: 14px 20px;
+    float: left;
+}
+
 nav a{
     display: block;
     color: white;
     text-decoration: none;
-    padding: 14px 20px;
+    padding-left: 5px;
+    padding-top: 26px;
+    padding-bottom: 10px;
+    padding-right: 24px;
     float: left;
 }
 
@@ -36,8 +49,8 @@ nav a:hover{
 
 span.red{
     font-size: 55px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bold;
+    font-family: 'lato';
+    font-weight: bolder;
     color: rgba(220, 20, 60, 1);
     
 }
@@ -45,15 +58,15 @@ span.red{
 
 span.orange{
     font-size: 55px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bold;
+    font-family: 'lato';
+    font-weight: bolder;
     color: rgba(255, 87, 51, 1);
 }
 
 span.black{
     font-size: 55px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bold;
+    font-family: 'lato';
+    font-weight: bolder;
     color: rgba(0, 0, 0, 1);
 }
 
@@ -103,15 +116,17 @@ footer a:hover{
     margin-left: auto;
 }
 
+
+
 .getbtn{
-    width: 250px;
-    height: 80px;
+    width: 259px;
+    height: 78px;
     color: white;
     background: rgb(200, 48, 6);
     border: 1px solid #383a3e;
     border-radius: 10px;
     margin: 10px 5px;
-    font-size: 35px;
+    font-size: 27px;
 }
 
 .getbtn:hover{
@@ -123,12 +138,13 @@ footer a:hover{
     box-shadow:  0 7px 7px 0 #1f212348, 0 10px 10px 0 #1f212348;
 }
 
+@media only screen and (min-width: 990px) {
 .photo{
     position: absolute;
    
     left: 65%;
     top: 30%;
-    width: 200px;
-    height: 200px;
-    
-}
+    width: 30%;
+    height: 40%;
+}  
+} 

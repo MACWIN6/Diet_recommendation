@@ -6,6 +6,7 @@
     <title>Signup</title>
     
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@1,700&display=swap');
 *{
     box-sizing: border-box;
@@ -126,6 +127,13 @@ h1{
     color: red;
 }
 
+.sign{
+    font-size: large;
+    font-weight: bolder;
+    font-family: 'lato';
+    color: red;
+}
+
 .bar{
     position: relative;
     top: 3px;
@@ -144,13 +152,27 @@ nav.sticky{
     top: 0; 
 }
 
+nav b{
+    display: block;
+    color: rgba(220, 20, 60, 1);
+    font-family: 'lato';
+    font-weight: black;
+    font-size: 30px;
+    padding: 14px 20px;
+    float: left;
+}
+ 
 nav a{
     display: block;
     color: white;
     text-decoration: none;
-    padding: 14px 20px;
+    padding-left: 5px;
+    padding-top: 26px;
+    padding-bottom: 10px;
+    padding-right: 24px;
     float: left;
 }
+
 
 nav a:hover{
     color: tomato;
@@ -191,6 +213,7 @@ footer a:hover{
 <body>
     <div class="container"> 
         <nav class="sticky">
+            <b href="index.html">Dietbook</b>
             <a class="" href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="papers.html">Papers</a>
@@ -212,7 +235,7 @@ footer a:hover{
         <input class="check" type="checkbox" required>
         <label for="check" class="p1">Remember Me</label>
         <hr class="bar">
-        <p><h3>Not a member | <a href="signup.html" class="p3">Create Account</a></h3></p>
+        <p><h3>Not a member | <a href="signup.html" class="p3"><span class="sign">Create Account</span></a></h3></p>
         
     </div>
    </center>

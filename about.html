@@ -6,6 +6,7 @@
     <title>About</title>
    
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
        *{
     box-sizing: border-box;
@@ -30,13 +31,27 @@ nav.sticky{
     top: 0; 
 }
 
+nav b{
+    display: block;
+    color: rgba(220, 20, 60, 1);
+    font-family: 'lato';
+    font-weight: black;
+    font-size: 30px;
+    padding: 14px 20px;
+    float: left;
+}
+ 
 nav a{
     display: block;
     color: white;
     text-decoration: none;
-    padding: 14px 20px;
+    padding-left: 5px;
+    padding-top: 26px;
+    padding-bottom: 10px;
+    padding-right: 24px;
     float: left;
 }
+
 
 nav a:hover{
     color: tomato;
@@ -90,6 +105,7 @@ footer a:hover{
 <body>
     <div class="container">
         <nav class="sticky">
+            <b href="index.html">Dietbook</b>
             <a class="" href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="papers.html">Papers</a>
