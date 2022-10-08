@@ -15,18 +15,13 @@
 
 body{
    background: url("photos/full-bloom.webp");
-    background-size:100%;
-    background-repeat: no-repeat;
+   background-size: cover;
 }
 nav{
    background: url("Photos/y-so-serious.png");
    overflow: hidden;
 }
-nav.sticky{
-   position: -webkit-sticky;
-   position: sticky;
-   top: 0; 
-}
+
 
 nav b{
     display: block;
@@ -126,7 +121,7 @@ footer a:hover{
 </head>
 <body>
     <div class="container">
-      <nav class="sticky">
+      <nav class="nav fixed-top">
          <b href="index.html">Dietbook</b>
          <a class="" href="index.html">Home</a>
          <a href="about.html">About</a>
