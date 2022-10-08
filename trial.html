@@ -3,185 +3,311 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-   
-    <style>
+    <title>DietBook</title>
+     <style>
       @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 *{
-   box-sizing: border-box;
-   list-style: none;
+    box-sizing: border-box;
+    list-style: none;
 }
 
 body{
-   background: url("photos/full-bloom.webp");
-   background-size: cover;
+    background: url("photos/full-bloom.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-nav{
-   background: url("Photos/y-so-serious.png");
-   overflow: hidden;
+
+nav {
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	right: 0;
+	top: 0;
+	font-family: 'Montserrat', sans-serif;
+	padding: 0 5%;
+	height: 60px;
+	background: url("photos/y-so-serious.png");
+    overflow: hidden;
+}
+
+nav.sticky{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0; 
 }
 
 
-nav b{
-    display: block;
-    color: rgba(220, 20, 60, 1);
+
+nav .logo {
+	float: left;
+	width: 40%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	font-size: 30px;
+	color: rgba(220, 20, 60, 1);
     font-family: 'lato';
-    font-weight: black;
-    font-size: 30px;
-    padding: 14px 20px;
-    float: left;
 }
- 
 
-nav a{
+nav .links {
+	float: right;
+	padding: 0;
+	margin: 0;
+	width: 60%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+nav .links li {
+	list-style: none;
+}
+nav .links a {
+	display: block;
+	padding: 1em;
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+	text-decoration: none;
+   
+}
+
+nav .links a:hover{
+    color: tomato;
+    background: rgba(169, 7, 7, 0.5);
+}
+
+#nav-toggle {
+	position: absolute;
+	top: -100px;
+}
+nav .icon-burger {
+	display: none;
+	position: absolute;
+	right: 5%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+nav .icon-burger .line {
+	width: 30px;
+	height: 5px;
+	background-color: #fff;
+	margin: 5px;
+	border-radius: 3px;
+	transition: all .3s ease-in-out;
+}
+@media screen and (max-width: 768px) {
+	nav .logo {
+		float: none;
+		width: auto;
+		justify-content: center;
+	}
+	nav .links {
+		float: none;
+		position: fixed;
+		z-index: 9;
+		left: 0;
+		right: 0;
+		top: 100px;
+		bottom: 100%;
+		width: auto;
+		height: auto;
+		flex-direction: column;
+		justify-content: space-evenly;
+		background-color: rgba(0,0,0,.6);
+		overflow: hidden;
+		box-sizing: border-box;
+		transition: all .5s ease-in-out;
+	}
+	nav .links a {
+		font-size: 20px;
+	}
+	nav :checked ~ .links {
+		bottom: 0;
+	}
+	nav .icon-burger {
+		display: block;
+	}
+	nav :checked ~ .icon-burger .line:nth-child(1) {
+		transform: translateY(10px) rotate(225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(3) {
+		transform: translateY(-10px) rotate(-225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(2) {
+		opacity: 0;
+	}
+	
+}
+
+span.red{
+    font-size: 55px;
+    font-family: 'lato';
+    font-weight: bolder;
+    color: rgba(220, 20, 60, 1);
+    
+}
+
+
+span.orange{
+    font-size: 55px;
+    font-family: 'lato';
+    font-weight: bolder;
+    color: rgba(255, 87, 51, 1);
+}
+
+span.black{
+    font-size: 55px;
+    font-family: 'lato';
+    font-weight: bolder;
+    color: rgba(0, 0, 0, 1);
+}
+
+section{
+    text-align: center;
+    color: rgb(134, 41, 221);
+    padding-top: 40px;
+    height: 100vh;
+}
+
+section h1{
+    font-size: 40px;    
+}
+
+iframe{
+    padding: 40px;
+}
+
+
+footer{
+    background: url("photos/y-so-serious.png");
+    overflow: hidden;
+    bottom: 0;
+}
+
+footer a{
     display: block;
     color: white;
     text-decoration: none;
-    padding-left: 5px;
-    padding-top: 26px;
-    padding-bottom: 10px;
-    padding-right: 24px;
+    padding: 14px 20px;
     float: left;
 }
 
-nav a:hover{
-   color: tomato;
-}
-
-.image1{
-   width: 50%;
-   height: 60%;
-}
-
-p{
-   float: center;
-   font-family: 'lato';
-   font-size: 30px;
-   color: white;
-   background-color: rgb(244, 52, 52);
-   border-radius: 10px;
-   padding: 14px 20px;
-}
-
-h1{
-   letter-spacing: 5px;
-   font-weight: bolder;
-   text-decoration: underline;
-   font-family:'lato';
-   font-size: 40px;
-   color: rgb(219, 8, 8);
-}
-
-h2{
-   letter-spacing: 5px;
-   font-weight: bold;
-   text-decoration: underline;
-   font-family:'lato';
-   font-size: 33px;
-   color: rgb(244, 52, 52);
-}
-footer{
-   background: url("Photos/y-so-serious.png");
-  overflow: hidden;
-}
-footer a{
-   display: block;
-   color: white;
-   text-decoration: none;
-   padding: 14px 20px;
-   float: left;
-}
-
 footer a:hover{
-   color: tomato;
+    color: tomato;
 }
+
 .copyright{
    float: right;
 }
 
+
 .container-fluid {
-   width: 100%;
-   padding-right: var(--bs-gutter-x, 0rem);
-   padding-left: var(--bs-gutter-x, 0rem);
-   margin-right: auto;
-   margin-left: auto;
+    width: 100%;
+    padding-right: var(--bs-gutter-x, 0rem);
+    padding-left: var(--bs-gutter-x, 0rem);
+    margin-right: auto;
+    margin-left: auto;
 }
 
 
-.bar1{
-   position: relative;
-   top: 5px;
-   width: 50%;
-   background-color: blue;
+
+
+.getbtn{
+    width: 259px;
+    height: 78px;
+    color: white;
+    background: rgb(200, 48, 6);
+    border: 1px solid #383a3e;
+    border-radius: 10px;
+    margin: 10px 5px;
+    font-size: 27px;
 }
 
+.getbtn:hover{
+    background: black;
+    border-bottom: 1.2px black;
+    color: white;
+    font-weight: bolder;
+    border-radius: 5px;
+    box-shadow:  0 7px 7px 0 #1f212348, 0 10px 10px 0 #1f212348;
+}
 
-    </style>
+@media only screen and (min-width: 990px) {
+
+.photo{
+    position: absolute;
+   
+    left: 65%;
+    top: 30%;
+    width: 30%;
+    height: 40%;
+}  
+} 
+
+
+     </style>
+    
 </head>
 <body>
-    <div class="container">
-      <nav class="nav fixed-top">
-         <b href="index.html">Dietbook</b>
-         <a class="" href="index.html">Home</a>
-         <a href="about.html">About</a>
-         <a href="papers.html">Papers</a>
-         <a href="login.html">Login/Signup</a>
-     </nav>
-        
-        <center><img src="Photos/meal-planning.webp" alt="" class="image1"></center>
-      
-          
-      
-        <main>
-            <section>
-            
-             <center><h1>How do Meal Plans work?</h1></center>
-             <h2>Introduction</h2>
-             
-             <p>Purdue provides meal plan options for students living in on-campus residences. All students living in on-campus residences are required to purchase a meal plan. Students living in off-campus housing are not eligible to purchase a meal plan. Official information on meal plans can be found here, but a summary is provided below.
-               </p>
-              
-            </section>
-            <section>
-                
-                <h2>Meal Plans</h2>
-                <p>Students can choose between a meal plan that has 8, 13, or 21 meal swipes each week. “Weeks” run Monday through Sunday during the semester, and unused swipes each week are not carried over. A meal swipe can be used for entry at any of the 4 dining courts, for a to-go meal at any of the 4 On-the-Go or 4 Quick Bite locations, or at the 23 participating retail locations and Chick-Fil-A.</p>
-                
-            </section>
-            <section>
-               <br>
-               <h2>Dining Dollars</h2>
-                <p>Meal plans additionally include a set amount of Dining Dollars, which can be used to purchase additional meals, snacks, or mini mart items in retail dining locations. Dining Dollars are disbursed to your account at the start of each semester. Any unused Dining Dollars rollover from the fall semester and spring semester, but are forfeited at the end of the academic year.</p>
-            </section>
-            <section>
-               <br>
-               <h2>Which meal plan should I pick?</h2>
-                <p>Most Purdue students opt for the “13 Track”, which provides 13 meal swipes each week and $225 Dining Dollars each semester. Many students find that they don't need 3 meals per day during college, and often eat out on the weekend. Of course, it's up to you to select the meal plan that works for your lifestyle and financial situation. You are able to upgrade your meal plan at any time during the semester, but can only downgrade your meal plan at the semester break.</p>
-                <br>
-            </section>
-            <section>
-               <h2>Videos related to meal plans</h2>
-                <center>
-                  <iframe width="32%" height="315" src="https://www.youtube.com/embed/SlZbf7uKtQA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    
-                  <iframe width="32%" height="315" src="https://www.youtube.com/embed/r1OSDnCDoGQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    
-                  <iframe width="32%" height="315" src="https://www.youtube.com/embed/XV5ofgVMXmI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <hr class="bar">
-            </center>
-    
-            </section>
-        </main>
+    <div class="container-fluid">
+   
+      <nav class="sticky">
+         <input id="nav-toggle" type="checkbox">
+         <div class="logo"><strong>DietBook</strong></div>
+         <ul class="links">
+           <li><a href="#home">Home</a></li>
+           <li><a href="#about">About</a></li>
+           <li><a href="#work">Work</a></li>
+           <li><a href="#projects">Projects</a></li>
+           <li><a href="#contact">Contact</a></li>
+         </ul>
+         <label for="nav-toggle" class="icon-burger">
+           <div class="line"></div>
+           <div class="line"></div>
+           <div class="line"></div>
+         </label>
+       </nav>
+
+    <main>  
+      <br>
+      <br><br><br>
+       <img src="photos/The Munchies - Bowl.png" alt="" class="photo">
         <br>
-        <footer>
-            <a href="#">Contact</a>
-            <a href="#">FAQ</a>
-            <a href="#">Review</a>
-            <a href="#" class="copyright">&copy; MilkyBar | 2022 </a>
-        </footer>
-    </div>
-    </body>
-    </html>   
+        
+        
+          
+
+        <br><br><br>
+         <p><span class="red">We </span> <span class="black"> plan your meals for </span> <span class="orange">you</span> <span class="black">,</span> <br>
+       
+        <span class="black">so </span> <span class="orange">you </span> <span class="black">can reach your</span>  <br>
+
+        
+        <span class="red">Fitness Goals</span><span class="black">.</span>  <br>
+        
+      <form action="process.html">
+        <button class="getbtn">Get Started</button></p>
+    </form>
+        <br><br>
+        <br><br><br>
+    </main>
+    <br><br><br>
+    
+ 
+    
+   
+ 
+    <footer>
+        <a href="#">Contacts</a>
+        <a href="#">FAQ</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Privacy Policy</a>
+        <a class="copyright" href="#">&copy; 2022 | DietBook</a>
+    </footer>
+</div>
+
+
+
 </body>
 </html>
